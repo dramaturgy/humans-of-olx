@@ -2,10 +2,54 @@
 <head>
   <meta charset="UTF-8">
   <title>Document</title>
+  <link rel="stylesheet" href="sweetalert2.min.css">
 </head>
 <body>
-  <div class="test-container">
-    <h1 class="test-content">TEST</h1>
+  <div class="holx-container">
+    <a href="javascript:void(0);" class="holx-anchor">
+      <div class="holx-thumb-container">
+        <div class="holx-thumb"><img src="sample.png" alt="sample-thumb"></div>
+        <div class="holx-meta">
+          <p class="meta-name">Katarina Monika</p>
+        </div>
+      </div>
+      <div class="holx-story">
+        <p class="holx-story-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, aperiam ea dolores vero cum rerum perferendis cupiditate, deleniti repellendus maxime, nam officiis at accusamus. Nostrum aliquid eaque delectus id ea.</p>
+      </div>
+    </a>
+    <a href="javascript:void(0);" class="holx-anchor">
+      <div class="holx-thumb-container">
+        <div class="holx-thumb"><img src="sample.png" alt="sample-thumb"></div>
+        <div class="holx-meta">
+          <p class="meta-name">Katarina Monika</p>
+        </div>
+      </div>
+      <div class="holx-story">
+        <p class="holx-story-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, aperiam ea dolores vero cum rerum perferendis cupiditate, deleniti repellendus maxime, nam officiis at accusamus. Nostrum aliquid eaque delectus id ea.</p>
+      </div>
+    </a>
+    <a href="javascript:void(0);" class="holx-anchor">
+      <div class="holx-thumb-container">
+        <div class="holx-thumb"><img src="sample.png" alt="sample-thumb"></div>
+        <div class="holx-meta">
+          <p class="meta-name">Katarina Monika</p>
+        </div>
+      </div>
+      <div class="holx-story">
+        <p class="holx-story-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, aperiam ea dolores vero cum rerum perferendis cupiditate, deleniti repellendus maxime, nam officiis at accusamus. Nostrum aliquid eaque delectus id ea.</p>
+      </div>
+    </a>
+    <a href="javascript:void(0);" class="holx-anchor">
+      <div class="holx-thumb-container">
+        <div class="holx-thumb"><img src="sample.png" alt="sample-thumb"></div>
+        <div class="holx-meta">
+          <p class="meta-name">Katarina Monika</p>
+        </div>
+      </div>
+      <div class="holx-story">
+        <p class="holx-story-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, aperiam ea dolores vero cum rerum perferendis cupiditate, deleniti repellendus maxime, nam officiis at accusamus. Nostrum aliquid eaque delectus id ea.</p>
+      </div>
+    </a>
   </div>
   <style>
     html, body {
@@ -18,26 +62,74 @@
       -moz-box-sizing: border-box;
       box-sizing: border-box;
     }
-    .test-container {
+    a, p, img { margin: 0; padding: 0; }
+    .holx-container {
       position: relative;
       width: 100%;
-      height: 320px;
-      background-color: teal;
-      color: white;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flex;
+      display: -o-flex;
+      display: flex;
+      flex-wrap: wrap;
     }
-    .test-content {
+    .holx-anchor {
+      flex: 0 1 33.333%;
+      text-decoration: none;
       text-align: center;
-      margin: 0;
-      width: 100%;
-      transform: translateY(-50%);
+      color: #FFF;
+    }
+    .holx-thumb-container {
       position: relative;
+      padding: .5rem;
+    }
+    .holx-thumb-container:before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: .5rem;
+      left: .5rem;
+      bottom: .5rem;
+      right: .5rem;
+      background-color: rgba(0, 0, 0, 0);
+      transition: all .3s ease-in;
+    }
+    .holx-anchor:hover .holx-thumb-container:before {
+      background-color: rgba(0, 0, 0, .75);
+    }
+    .holx-thumb {
+      display: block;
+    }
+    .holx-thumb > img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    .holx-meta {
+      position: absolute;
       top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .meta-name {
+      font-size: 1.5rem;
+      line-height: 2rem;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0);
+      transition: all .3s ease-in;
+    }
+    .holx-anchor:hover .meta-name {
+      color: rgba(255, 255, 255, 1);
+    }
+    .holx-story {
+      display: none;
     }
   </style>
   <script
     src="https://code.jquery.com/jquery-3.2.1.min.js"
     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
     crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/sweetalert2@7.0.9/dist/sweetalert2.all.js"></script>
   <script>
     $(function() {
       console.log( $ );
